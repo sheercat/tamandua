@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+        xmlns:th="http://www.thymeleaf.org"
+        layout:decorator="layout">
+<head>
+    <meta charset="UTF-8"></meta>
+</head>
+<body>
+<div layout:fragment="content">
+    <form enctype="multipart/form-data" action="/image" th:action="@{/image}" method="post" th:object="${contactForm}">
+        <input type="file" name="media" id="file" pseudo="-webkit-file-upload-button"/><br />
+        <input type="submit" value="フィルター" />
+    </form>
+</div>
+</body>
+</html>
